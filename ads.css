@@ -1,0 +1,101 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.ads {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+.skip{
+    position: absolute;
+    border-radius: 20px;
+    top:900px;
+    right: 65px;
+    padding: 10px 15px;
+    font-size: 15px;
+    z-index: 2;
+}
+
+.skip{
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+/* ============================================
+   LAPTOP / SMALL DESKTOP (max 1400px)
+============================================ */
+@media (max-width: 1400px) {
+    .skip {
+        top: 620px;
+        right: 40px;
+        padding: 8px 12px;
+        font-size: 17px;
+        border-radius: 16px;
+    }
+}
+
+
+/* ============================================
+   TABLET (max 1024px)
+============================================ */
+@media (max-width: 1024px) {
+    .ads {
+        object-position: center;
+    }
+
+    .skip {
+        bottom: 35px;
+        right: 25px;
+        padding: 8px 13px;
+        font-size: 13px;
+    }
+}
+
+
+/* ============================================
+   SMARTPHONE — vertical/portrait video (max 600px)
+============================================ */
+@media (max-width: 600px) and (orientation: portrait) {
+    .ads {
+        width: 100vw;
+        height: 100vh;
+        object-fit: contain;
+        object-position: center;
+    }
+
+   .skip {
+        top: 560px;
+        right: 15px;
+        bottom: auto;
+        padding: 8px 12px;
+        font-size: 12px;
+        border-radius: 16px;
+    }
+}
+
+
+/* ============================================
+   SMARTPHONE — landscape (rotated sideways)
+============================================ */
+@media (max-width: 900px) and (orientation: landscape) {
+    .ads {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .skip {
+        bottom: 15px;
+        right: 15px;
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+}

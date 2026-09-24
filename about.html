@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Better Call Saul</title>
+
+  <link rel="stylesheet" href="about.css">
+
+  <link rel="icon" type="image/png" href="bcs_images/law.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+
+
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="ads.html"><img class="logo" src="bcs_images/logo3.png"></a></li>
+      <li><a href="main.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <main>
+
+    <div class="team-wrap" id="heroWrap">
+
+      <div class="team-a">
+        <p class="p1">Who is <span class="sg1">Saul Goodman</span>?</p>
+        <div class="p10">
+          <p class="p2">You don't need a criminal Lawyer,<br>
+            <span class="sg2">You need a criminal Lawyer</span>
+          </p>
+        </div>
+        <button class="b1" id="heroButton"><span>learn about him</span></button>
+        <video autoplay muted loop playsinline>
+          <source src="bcs_videos/bcs1.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="team-b">
+        <p class="p1-b">Jimmy McGill</p>
+        <div class="p10-b">
+          <p class="p2-b">Before becoming Saul Goodman, he was Jimmy McGill,
+            an ambitious lawyer determined to make a name for himself. He was the younger brother of Chuck McGill and
+            had a complicated relationship with his family.
+            Along the way, Jimmy formed close friendships and relationships, especially with Kim Wexler,
+            whose love and influence deeply affected his life. After earning his law degree and passing the New Mexico
+            Bar Exam, Jimmy faced rejection, personal struggles, and difficult choices that eventually led him to become
+            the bold and unconventional Saul Goodman.</p>
+        </div>
+
+        <button class="b1-b" id="heroButtonBack"><span>Go Back</span></button>
+        <video autoplay muted loop playsinline>
+          <source src="bcs_videos/bcs2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+
+
+    <div class=why-section>
+
+      <div class="why-wrapper">
+        <img class="why" src="bcs_images/why.png">
+      </div>
+
+      <div class="why-saul-section">
+
+        <div class="why-saul-cards">
+          <div class="card" onclick="openModal('modal1')"><span class="card-text">1. I Get the Job Done!</span></div>
+          <div class="card" onclick="openModal('modal2')"><span class="card-text">2. I'm Always on Your Side</span>
+          </div>
+          <div class="card" onclick="openModal('modal3')"><span class="card-text">3. I Think Outside the Box</span>
+          </div>
+          <div class="card" onclick="openModal('modal4')"><span class="card-text">4. Why Call Anyone Else?</span></div>
+        </div>
+
+        <div class="overlay" id="modal1">
+          <div class="modal-box">
+            <span class="close-btn" onclick="closeModal('modal1')">✕</span>
+            <h2>I Get the Job Done!</h2>
+            <p>Got a legal problem? Uh-oh. That's bad. But you know what's good? Me.
+              I'm Saul Goodman, and I know my way around a courtroom, a contract,
+              and let's just say a few complicated situations. You bring me the
+              problem, I'll bring the solution.</p>
+          </div>
+        </div>
+
+        <div class="overlay" id="modal2">
+          <div class="modal-box">
+            <span class="close-btn" onclick="closeModal('modal2')">✕</span>
+            <h2>I'm Always on Your Side</h2>
+            <p>Other lawyers might give you a fancy speech and send you a bill that'll
+              make your eyes pop out. Me? I'm here to listen, understand your
+              situation, and fight for you. Because when you've got a problem, you don't
+              need another problem!</p>
+          </div>
+        </div>
+
+        <div class="overlay" id="modal3">
+          <div class="modal-box">
+            <span class="close-btn" onclick="closeModal('modal3')">✕</span>
+            <h2>I Think Outside the Box</h2>
+            <p>Actually, forget the box. I threw the box away. Legal trouble isn't always
+              straightforward, so why should your lawyer be? I use creativity,
+              experience, and a little Goodman magic to find a way forward.</p>
+          </div>
+        </div>
+
+        <div class="overlay" id="modal4">
+          <div class="modal-box">
+            <span class="close-btn" onclick="closeModal('modal4')">✕</span>
+            <h2>Why Call Anyone Else?</h2>
+            <p>You could spend hours searching for a lawyer. You could ask your neighbor.
+              You could flip a coin. Or... you could Better call me.
+              I'm friendly, I'm persuasive, and I've got a suit that says, “This guy
+              knows what he's doing.”</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </main>
+
+
+  <footer>
+
+    <div class="foot">
+      <img class="abq" src="bcs_images/abq.png" alt="alburquerque">
+    </div>
+
+    <p class="p3">CALL <span class="sg3">SAUL</span> NOW! (505)-503-4455</p>
+
+    <p class="p4">ALBURQUERQUE. NEW MEXICO. A CITY OF OPPORTUNITY.</p>
+
+    <img class="wc" src="bcs_images/wc.svg">
+
+  </footer>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+    }
+    const heroWrap = document.getElementById('heroWrap');
+    const heroButton = document.getElementById('heroButton');
+    const heroButtonBack = document.getElementById('heroButtonBack');
+
+    heroButton.addEventListener('click', function () {
+      heroWrap.classList.add('flipped');
+    });
+
+    heroButtonBack.addEventListener('click', function () {
+      heroWrap.classList.remove('flipped');
+    });
+  </script>
+
+</body>
+
+
+
+
+</html>

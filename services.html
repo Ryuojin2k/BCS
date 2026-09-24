@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Better Call Saul</title>
+
+    <link rel="stylesheet" href="services.css">
+
+    <link rel="icon" type="image/png" href="bcs_images/law.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+</head>
+
+
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="ads.html"><img class="logo" src="bcs_images/logo3.png"></a></li>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+       
+        <div class="context">
+
+        <div class="rectangle"></div>
+
+        <div class="offer"><p>What Saul Goodman Can Offer You?</p></div>
+
+        </div>
+
+        <div class="services-wrap">
+
+        <div class="service-item">
+  <div class="service-title" onclick="toggleService(this)">
+    ⚖️ Criminal Defense
+  </div>
+  <div class="service-text">
+    <a href="criminal-defense.html">"Accused of something? Let's talk."</a>
+  </div>
+</div>
+
+<div class="service-item">
+  <div class="service-title" onclick="toggleService(this)">
+    📋 Legal Consultation
+  </div>
+  <div class="service-text">
+    <a href="legal-consultation.html">"You have questions. Saul has answers."</a>
+  </div>
+</div>
+<div class="service-item">
+  <div class="service-title" onclick="toggleService(this)">
+    🤝 Plea Negotiation
+  </div>
+  <div class="service-text">
+    <a href="plea-negotiation.html">"Sometimes the best defense is a really good deal."</a>
+  </div>
+</div>
+
+<div class="service-item">
+  <div class="service-title" onclick="toggleService(this)">
+    🚨 Need a Lawyer?
+  </div>
+  <div class="service-text">
+    <a href="Need-a-lawyer.html">"BETTER CALL SAUL!"</a>
+  </div>
+</div>
+
+   </div>
+
+   <div class="jimmy3">
+
+  <img class="jimmy1" src="bcs_images/jimmy6.png" alt="Saul Goodman" onclick="playSound('sound1')">
+  <audio id="sound1" src="bcs_audio/bcs.mp3"></audio>
+
+  <img class="jimmy2" src="bcs_images/jimmy7.png" alt="Saul Goodman" onclick="playSound('sound2')">
+  <audio id="sound2" src="bcs_audio/bcs.mp3"></audio>
+
+</div>
+
+      <a href="main.html">   
+      <button class="b1"><span>Go Back</span></button>
+      </a>
+
+    </main>
+
+    <footer>
+
+        <div class="foot">
+            <img class="abq" src="bcs_images/abq.png" alt="alburquerque">
+        </div>
+
+        <p class="p3">CALL <span class="sg3">SAUL</span> NOW! (505)-503-4455</p>
+
+        <p class="p4">ALBURQUERQUE. NEW MEXICO. A CITY OF OPPORTUNITY.</p>
+
+        <img class="wc" src="bcs_images/wc.svg">
+
+    </footer>
+
+    <script>
+  function toggleService(titleEl) {
+    const textEl = titleEl.nextElementSibling;
+    textEl.classList.toggle('open');
+  }
+
+   function playSound(id) {
+    const sound = document.getElementById(id);
+    sound.currentTime = 0;
+    sound.play();
+  }
+</script>
+
+</body>
+
+</html>

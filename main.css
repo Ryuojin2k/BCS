@@ -1,0 +1,682 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Marck Script';
+    src: url('bcs fonts/Marck_Script/MarckScript-Regular.ttf') format('truetype');
+}
+
+body {
+    position: relative;
+    background-color: #222222;
+    margin: 0px;
+}
+
+.navbar ul {
+    background-color: #0D0D0B;
+    height: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    background-color: #0D0D0B;
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 8px;
+    height: 2px;
+    background-color: #FFD700;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #FFD700;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Active / clicked page */
+.navbar a.active {
+    color: #FFD700;
+}
+
+.navbar a.active::after {
+    transform: scaleX(1);
+}
+
+.navbar li:first-child {
+    margin-right: auto;
+}
+
+.navbar li {
+    margin-left: 5px;
+}
+
+.logo {
+    height: 75px;
+    /* fits nicely in your 80px navbar */
+    width: auto;
+    /* keeps aspect ratio */
+    display: block;
+    margin-right: 20px;
+    /* small gap between logo and Home link */
+}
+
+.jimmy2-wrapper {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.jimmy2 {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    display: block;
+    object-position: top 0% right 85%;
+    transform: translateY(-250px);
+
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.jimmy-img {
+    position: relative;
+    display: inline-block;
+}
+
+.jimmy3 {
+    position: absolute;
+    top: 50px;
+    /*50px */
+    left: 290px;
+    /*290px */
+    width: 800px;
+    /*800px */
+}
+
+.jimmy4 {
+    position: absolute;
+    width: 800px;
+    top: 570px;
+    left: 800px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.p1 {
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+    font-weight: 700;
+    font-size: 60px;
+    color: #FFFFFF;
+    margin: 0 0 10px 0;
+}
+
+.p2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 25px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.sg {
+    color: #FFD700
+}
+
+video {
+    position: absolute;
+    width: 650px;
+    height: auto;
+    left: 100px;
+    top: 600px;
+    display: block;
+    border-radius: 20px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    width: 50px;
+    height: 50px;
+    padding: 10px 20px;
+
+    position: relative;
+    margin: 20px auto;
+
+    cursor: pointer;
+}
+
+.btn-icon {
+    width: 60px;
+    height: 60px;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 112px;
+    overflow: hidden;
+    border-top: 4px solid #FFB800;
+}
+
+.foot {
+    width: 100%;
+    height: 175%;
+}
+
+.abq {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    display: block
+}
+
+.sg2 {
+    color: #FFD700;
+}
+
+.p3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    z-index: 2;
+    margin: 0;
+    text-align: left;
+}
+
+.p4 {
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    width: 280px;
+    z-index: 2;
+    margin: 0;
+    text-align: left;
+}
+
+.wc {
+    position: absolute;
+    top: 25%;
+    left: 32%;
+    height: 50px;
+}
+
+.b3 {
+    position: absolute;
+    top: 990px;
+    left: 175px;
+    display: flex;
+    gap: 25px;
+    z-index: 5;
+
+}
+
+.b1 {
+    background-color: #ff0505;
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 22px 95px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.b2 {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 22px 65px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.b1:hover {
+    background-color: #b50404;
+    transform: translateY(-2px);
+}
+
+.b2:hover {
+    transform: translateY(-2px);
+}
+
+.vertical-wrap {
+    position: absolute;
+    top: 665px;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    color: #FFD700;
+    font-size: 12px;
+    letter-spacing: 6px;
+    font-weight: 500;
+}
+
+.rule {
+    width: 2px;
+    height: 35px;
+    background: #FFD700;
+
+}
+
+.signature-wrap {
+    position: absolute;
+    top: 945px;
+    left: 1585px;
+}
+
+.signature {
+    font-family: 'Marck Script', cursive;
+    font-size: 48px;
+    color: #FFD700;
+    margin: 0;
+    display: inline-block;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 4px;
+    transform: rotate(-21deg);
+
+}
+
+.swoosh {
+    display: block;
+    margin-top: -5px;
+}
+
+
+
+
+body {
+    cursor: default;
+    user-select: none;
+    /* ... */
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* LAPTOP (1200px - 1400px) */
+
+@media (max-width: 1400px) {
+
+    .jimmy2 {
+        margin-top: 65px;
+        left: 220px;
+    }
+
+    .jimmy3 {
+        top: 40px;
+        left: 220px;
+        width: 500px;
+    }
+
+    .jimmy4 {
+        top: 395px;
+        left: 600px;
+        width: 600px;
+    }
+
+    .p1 {
+        font-size: 45px;
+    }
+
+    .p2 {
+        font-size: 19px;
+    }
+
+    video {
+        width: 490px;
+        left: 75px;
+        top: 400px;
+    }
+
+    .b3 {
+        top: 700px;
+        left: 120px;
+        gap: 18px;
+    }
+
+    .b1 {
+        padding: 18px 70px;
+        font-size: 14px;
+    }
+
+    .b2 {
+        padding: 18px 50px;
+        font-size: 14px;
+    }
+
+    .vertical-wrap {
+        top: 417px;
+        left: 45px;
+    }
+
+    .signature-wrap {
+        top: 700px;
+        left: 1170px;
+    }
+
+    .signature {
+        font-size: 26px;
+    }
+
+    .p3 {
+        left: 770px;
+    }
+
+}
+
+
+/* TABLET (768px - 1024px) */
+
+@media (max-width: 1100px) {
+
+    .jimmy-img,
+    .jimmy2-wrapper,
+    .jimmy3,
+    .jimmy4,
+    video,
+    .b3 {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin: 20px auto;
+    }
+
+    .jimmy2-wrapper {
+        height: 400px;
+    }
+     .jimmy2 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        object-position: top 0 right 50%;
+        transform: translateY(-160px);
+    }
+    .jimmy-img {
+        margin-top: -20px;
+        padding-top: -20px;
+    }
+    .jimmy3 {
+        display: block;
+        margin: 30px auto 0 auto;
+        width: 300px;
+    }
+
+    .jimmy4 {
+        padding: 0 30px;
+        text-align: left;
+    }
+
+    .p1 {
+        font-size: 32px;
+    }
+
+    .p2 {
+        font-size: 16px;
+    }
+
+    video {
+        width: 90%;
+        display: block;
+        margin: 20px auto;
+        border-radius: 12px;
+    }
+
+    .b3 {
+        position: absolute;
+        top: 730px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .b1, .b2 {
+        width: 100%;
+        font-size: 12px;
+        padding: 15px 50px;
+    }
+    /* decorative elements — hide on smaller screens, not enough room */
+    .vertical-wrap,
+    .signature-wrap {
+        display: none;
+    }
+
+    footer {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .p3,
+    .p4 {
+        position: static;
+        transform: none;
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .wc {
+        position: static;
+        display: block;
+        margin: 15px auto;
+    }
+}
+
+
+/* SMARTPHONE (max 600px) */
+
+@media (max-width: 600px) and (orientation: portrait) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .navbar ul {
+        padding: 0.5px;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .jimmy-img {
+        margin-top: -20px;
+        padding-top: -20px;
+    }
+
+    .jimmy2-wrapper {
+        overflow: hidden;
+        width: 100%;
+        height: 90vh;
+    }
+
+    .jimmy2 {
+        width: 100%;
+        height: 40%;
+        object-fit: cover;
+        display: block;
+        object-position: top 0 right 50%;
+        transform: translateY(-160px);
+    }
+
+    .jimmy3 {
+        position: absolute;
+        top: 80px;
+        left: 20px;
+        width: 220px;
+    }
+
+    .jimmy4 {
+        position: absolute;
+        top: 225px;
+        left: -1px;
+        padding: 0 18px;
+    }
+
+    .p1 {
+        font-size: 23px;
+    }
+
+    .p2 {
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    video {
+        position: absolute;
+        height: 229px;
+        top: 490px;
+        left: 11px;
+        width: 95%;
+        border-radius: 20px;
+    }
+
+    .b3 {
+        position: absolute;
+        top: 750px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .b1, .b2 {
+        width: 100%;
+        font-size: 12px;
+        padding: 15px 50px;
+    }
+
+    .p3 {
+        font-size: 22px;
+    }
+
+    .p4 {
+        font-size: 12px;
+        width: 90%;
+    }
+    .signature-wrap {
+     display: block;
+     top: 860px;
+     left: 130px;
+    }
+    footer {
+        height: 100px;      
+        overflow: hidden;
+        padding: 0;
+        border-top: 4px solid #FFB800;
+    }
+      .abq {
+        object-position: bottom;   
+        height: 100px;          
+    }
+
+    .foot {
+        height: 150px;          
+    }
+
+    .p3 {
+        position: absolute;
+        top: 45%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 15px;
+        width: 90%;
+        margin: 0;
+    }
+
+     .p4 {
+        position: absolute;
+        top: 45%;
+        left: 19%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 8px;
+        width: 35%;
+        margin: 0;
+    }
+
+    .wc {
+        position: absolute;
+        top: 20%;
+        left: 40%;
+        transform: translateX(-50%);
+        height: 20px;
+    } 
+}

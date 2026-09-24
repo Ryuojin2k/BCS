@@ -1,0 +1,950 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Marck Script';
+    src: url('bcs fonts/Marck_Script/MarckScript-Regular.ttf') format('truetype');
+}
+
+body {
+    position: relative;
+    background-color: #222222;
+    /* #222222 */
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.navbar ul {
+    background-color: #0D0D0B;
+    height: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    background-color: #0D0D0B;
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 8px;
+    height: 2px;
+    background-color: #FFD700;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #FFD700;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Active / clicked page */
+.navbar a.active {
+    color: #FFD700;
+}
+
+.navbar a.active::after {
+    transform: scaleX(1);
+}
+
+.navbar li:first-child {
+    margin-right: auto;
+}
+
+.navbar li {
+    margin-left: 5px;
+}
+
+.logo {
+    height: 75px;
+    /* fits nicely in your 80px navbar */
+    width: auto;
+    /* keeps aspect ratio */
+    display: block;
+    margin-right: 20px;
+    /* small gap between logo and Home link */
+}
+
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 112px;
+    overflow: hidden;
+    border-top: 4px solid #FFB800;
+}
+
+.foot {
+    width: 100%;
+    height: 175%;
+}
+
+.abq {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    display: block
+}
+
+.sg3 {
+    color: #FFD700;
+}
+
+.p3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    z-index: 2;
+    margin: 0;
+    text-align: left;
+}
+
+.p4 {
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 1px;
+    width: 280px;
+    z-index: 2;
+    margin: 0;
+    text-align: left;
+}
+
+.wc {
+    position: absolute;
+    top: 25%;
+    left: 32%;
+    height: 50px;
+}
+
+.b3 {
+    position: absolute;
+    top: 990px;
+    left: 175px;
+    display: flex;
+    gap: 25px;
+    z-index: 5;
+
+}
+
+video {
+    width: 804px;
+    /*750px*/
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    transform: translateY(-1px) translateX(1115px);
+
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
+    mask-image: linear-gradient(to right, transparent 0%, black 30%);
+}
+
+.p1 {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    left: 12%;
+}
+
+.sg1 {
+    color: #F6CA09;
+}
+
+.p2 {
+    position: absolute;
+    color: #FFD700;
+    font-size: 45px;
+    font-weight: 600;
+    font-family: 'Marck Script', cursive;
+    left: 12%;
+    top: 25%;
+    line-height: 1.4;
+}
+
+.sg2 {
+    margin-left: 250px;
+}
+
+.b1 {
+    position: absolute;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    width: 260px;
+    padding: 22px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+
+    top: 365px;
+    left: 380px;
+}
+
+.b1 span {
+    position: relative;
+    z-index: 2;
+}
+
+.b1:hover {
+    transform: translateY(-2px);
+}
+
+.b1::before,
+.b1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #FFD900;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.b1::before {
+    left: 0;
+    transform-origin: left;
+}
+
+.b1::after {
+    right: 0;
+    transform-origin: right;
+}
+
+.b1:hover::before,
+.b1:hover::after {
+    transform: scaleX(1);
+}
+
+.why-section {
+    display: flex;
+    width: 100%;
+    height: 266px;
+    /* ONE height controls everything — change only this number */
+}
+
+.why-wrapper {
+    width: 40%;
+    height: 100%;
+    /* fills whatever height .why-section has */
+    overflow: hidden;
+}
+
+.why {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.why-saul-section {
+    width: 60%;
+    height: 100%;
+    /* fills whatever height .why-section has */
+    background-color: #FCDF03;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-saul-cards {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 200px;
+    background-color: #F6CA09;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    border: solid;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-text {
+    display: inline-block;
+    background-color: #222;
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 20px 25px;
+    border-radius: 8px;
+    max-width: 80%;
+    text-align: center;
+}
+
+.overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    background: #F5C400;
+    /*#222*/
+    color: #0D0D0B;
+    font-family: 'Oswald', sans-serif;
+    text-align: justify;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    min-height: 400px;
+    font-size: 25px;
+    position: relative;
+    transform: scale(0.85);
+    transition: transform 0.3s ease;
+}
+
+.overlay.active .modal-box {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.team-wrap {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.team-a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+    transform: translateX(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.team-b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    transform: translateX(60px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.team-wrap.flipped .team-a {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    transform: translateX(-60px);
+}
+
+.team-wrap.flipped .team-b {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+    transform: translateX(0);
+}
+
+.p1-b {
+    position: absolute;
+    color: #FFD700;
+    font-size: 60px;
+    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    right: 29.5%;
+    top: 12%;
+    text-align: right;
+    margin: 0;
+}
+
+.p2-b {
+    position: absolute;
+    right: 8%;
+    top: 27%;
+    width: 800px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+}
+
+.b1-b {
+    position: absolute;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    width: 260px;
+    padding: 22px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+
+    top: 365px;
+    right: 240px;
+}
+
+.b1-b span {
+    position: relative;
+    z-index: 2;
+}
+
+.b1-b:hover {
+    transform: translateY(-2px);
+}
+
+.b1-b::before,
+.b1-b::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #FFD900;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.b1-b::before {
+    left: 0;
+    transform-origin: left;
+}
+
+.b1-b::after {
+    right: 0;
+    transform-origin: right;
+}
+
+.b1-b:hover::before,
+.b1-b:hover::after {
+    transform: scaleX(1);
+}
+
+.team-b video {
+    width: 804px;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    transform: translateY(-1px) translateX(0px);
+    -webkit-mask-image: linear-gradient(to left, transparent 0%, black 30%);
+    mask-image: linear-gradient(to left, transparent 0%, black 30%);
+}
+
+
+
+
+body {
+    cursor: default;
+    user-select: none;
+    /* ... */
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* ============================================
+   LAPTOP (1200px - 1400px)
+============================================ */
+@media (max-width: 1400px) {
+
+    .p1 {
+        font-size: 45px;
+    }
+
+    .p2 {
+        font-size: 32px;
+        top: 22%;
+    }
+
+    .b1 {
+        top: 300px;
+        left: 320px;
+    }
+
+    video {
+        width: 600px;
+        height: 400px;
+        transform: translateY(-1px) translateX(850px);
+    }
+
+    .p1-b {
+        font-size: 45px;
+        top: 8%;
+    }
+
+    .p2-b {
+        width: 600px;
+        font-size: 17px;
+        top: 24%;
+    }
+
+    .b1-b {
+        top: 300px;
+        right: 180px;
+    }
+
+    .team-b video {
+        width: 600px;
+        height: 400px;
+    }
+
+    .team-wrap {
+        height: 400px;
+    }
+
+    .p3 {
+        position: absolute;
+        top: 45%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 28px;
+        width: 90%;
+        margin: 0;
+    }
+
+    .wc {
+        position: absolute;
+        top: 22%;
+        left: 36.5%;
+        transform: translateX(-50%);
+        height: 38px;
+    }
+
+}
+
+
+/* ============================================
+   TABLET (max 1100px, portrait)
+============================================ */
+@media (max-width: 1100px) and (orientation: portrait) {
+
+    .team-wrap {
+        height: 685px;
+    }
+
+    /* stack text above video instead of overlapping it */
+    .p1 {
+        position: static;
+        font-size: 45px;
+        text-align: center;
+        transform: translateX(10px) translateY(30px);
+    }
+
+    .p2 {
+        position: static;
+        font-size: 22px;
+        text-align: center;
+        transform: translateX(10px) translateY(1px);
+    }
+
+    .sg2 {
+        margin-left: 8px;
+    }
+
+    .b1 {
+        position: static;
+        display: block;
+        background-color: #FFD700;
+        transform: translateX(380px) translateY(1px);
+    }
+
+    video {
+        position: static;
+        display: block;
+        width: 100%;
+        height: 400px;
+        margin: 30px auto 20px auto;
+        transform: none;
+        -webkit-mask-image: none;
+        mask-image: none;
+        object-fit: cover;
+    }
+
+    .p1-b {
+        position: static;
+        font-size: 34px;
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+
+    .p2-b {
+        position: static;
+        width: 90%;
+        font-size: 16px;
+        margin: 10px auto;
+    }
+
+    .b1-b {
+        position: static;
+        display: block;
+        margin: 20px auto;
+        background-color: #FFD700;
+    }
+
+    .team-b video {
+        position: static;
+        display: block;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        margin: 20px auto;
+        transform: none;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    /* why-section: stack image above cards, cards into 2x2 grid */
+    .why-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .why-wrapper {
+        width: 100%;
+        height: 220px;
+    }
+
+    .why-saul-section {
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .why-saul-cards {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        width: 45%;
+        height: 150px;
+    }
+
+    /* footer — same pattern as main.css */
+    footer {
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+        padding: 0;
+        border-top: 4px solid #FFB800;
+    }
+
+    .abq {
+        object-position: bottom;
+        height: 100px;
+    }
+
+    .foot {
+        height: 150px;
+    }
+
+    .p3 {
+        position: absolute;
+        top: 45%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 28px;
+        width: 90%;
+        margin: 0;
+    }
+
+    .p4 {
+        position: absolute;
+        top: 45%;
+        left: 19%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 18px;
+        width: 32%;
+        margin: 0;
+    }
+
+    .wc {
+        position: absolute;
+        top: 22%;
+        left: 41%;
+        transform: translateX(-50%);
+        height: 38px;
+        width: auto;
+    }
+}
+
+
+/* SMARTPHONE */
+@media (max-width: 600px) and (orientation: portrait) {
+
+    .navbar ul {
+        padding: 0.5px;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .team-wrap {
+        height: 620px;
+    }
+
+    .p1 {
+        position: relative;
+        font-size: 35px;
+        text-align: center;
+        margin: 15px 0 0 0;
+        transform: none;
+        top: 132px;
+        left: 5px;
+    }
+
+    .p2 {
+        position: relative;
+        font-size: 20px;
+        text-align: center;
+        margin: 10px 0;
+        top: 160px;
+        left: -2px;
+    }
+
+    .sg2 {
+        margin-left: 8px;
+    }
+
+    .b1 {
+        position: relative;
+        display: block;
+        margin: 15px auto;
+        width: 80%;
+        transform: none;
+        top: 170px;
+        left: 1px;
+    }
+
+    video {
+        position: relative;
+        display: block;
+        width: 130%;
+        height: 220px;
+        object-fit: cover;
+        margin: 15px auto;
+        transform: none;
+        -webkit-mask-image: none;
+        mask-image: none;
+        top: 180px;
+        left: -63px;
+    }
+
+    .p1-b {
+        position: relative;
+        font-size: 35px;
+        text-align: center;
+        margin: 15px 0 0 0;
+        top: 50px;
+        left: -1px;
+    }
+
+    .p2-b {
+        position: relative;
+        width: 90%;
+        font-size: 13px;
+        margin: 10px auto;
+        top: 50px;
+        left: -1px;
+    }
+
+    .b1-b {
+        position: relative;
+        display: block;
+        margin: 15px auto;
+        width: 80%;
+        top: 50px;
+        left: 1px;
+    }
+
+    .team-b video {
+        position: relative;
+        display: block;
+        width: 130%;
+        height: 220px;
+        object-fit: cover;
+        margin: 15px auto;
+        transform: none;
+        -webkit-mask-image: none;
+        mask-image: none;
+        top: 50px;
+        left: -63px;
+    }
+
+    .why-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .why-wrapper {
+        width: 100%;
+        height: 180px;
+    }
+
+    .why-saul-section {
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .why-saul-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .card {
+        width: 80%;
+        height: 120px;
+    }
+
+    .modal-box {
+        font-size: 25px;
+        padding: 25px;
+    }
+
+    /* footer — same pattern as main.css */
+    footer {
+        height: 100px;
+        overflow: hidden;
+        padding: 0;
+        border-top: 4px solid #FFB800;
+    }
+
+    .abq {
+        object-position: bottom;
+        height: 100px;
+    }
+
+    .foot {
+        height: 150px;
+    }
+
+    .p3 {
+        position: absolute;
+        top: 45%;
+        left: 71%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 15px;
+        width: 90%;
+        margin: 0;
+    }
+
+    .p4 {
+        position: absolute;
+        top: 45%;
+        left: 19%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 8px;
+        width: 35%;
+        margin: 0;
+    }
+
+    .wc {
+        position: absolute;
+        top: 32%;
+        left: 40%;
+        transform: translateX(-50%);
+        height: 23px;
+        width: auto;
+    }
+}
